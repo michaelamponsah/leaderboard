@@ -51,10 +51,11 @@ header {
 
 .form-control {
   margin: 0.5em 0;
+  width: 80%;
 }
 
 input {
-  width: 80%;
+  width: 100%;
   height: 30px;
   padding: 0.8em;
 }
@@ -66,4 +67,8 @@ input {
 
 .btn:hover {
   cursor: pointer;
+}
+
+.btn-submit {
+  float: right;
 }
