@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leaderboard</title>
 </head>
-<body>
+<body class="container">
   <header>
     <h1>Leaderboard</h1>
   </header>
   <section class="section">
     <div class="section--recent-score">
-      <span>Recent scores</span> <button>Refresh</button>
+      <span class="section--sub-header">Recent scores <button class="btn">Refresh</button></span> 
       <ul class="score-list">
         <li class="score-list--item">Name: 100</li>
         <li class="score-list--item">Name: 100</li>
@@ -22,15 +22,15 @@
       </ul>
     </div>
     <div class="section--add-score">
-      <span>Add score</span>
+      <span class="section--sub-header">Add score</span>
       <form action="">
         <div class="form-control">
           <label for="playerName" aria-hidden></label>
-          <input type="text" id="playerName">
+          <input type="text" id="playerName" placeholder="Your name">
         </div>
         <div class="form-control">
           <label for="playerScore" aria-hidden></label>
-          <input type="text" id="playerScore">
+          <input type="text" id="playerScore" placeholder="Your score">
         </div>
         <button class="btn" type="submit">Submit</button>
       </form>
