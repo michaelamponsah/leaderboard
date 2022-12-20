@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utils */
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+header {
+  margin-top: 0.8em;
+}
+
+.section {
+  margin-top: 1.5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2em;
+}
+
+.section--sub-header {
+  display: inline-block;
+  margin: 0.8em 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.score-list {
+  border: 2px solid #030303;
+}
+
+.score-list :nth-child(even) {
+  background-color: rgba(168, 168, 168, 0.5);
+}
+
+.score-list--item {
+  padding: 0.4em;
+}
+
+.form-control {
+  margin: 0.5em 0;
+  width: 80%;
+}
+
+input {
+  width: 100%;
+  height: 30px;
+  padding: 0.8em;
+}
+
+.btn {
+  padding: 0.25em;
+  font-weight: bold;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn-submit {
+  float: right;
+}
