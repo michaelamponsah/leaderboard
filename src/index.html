@@ -7,5 +7,34 @@
   <title>Leaderboard</title>
 </head>
 <body>
+  <header>
+    <h1>Leaderboard</h1>
+  </header>
+  <section class="section">
+    <div class="section--recent-score">
+      <span>Recent scores</span> <button>Refresh</button>
+      <ul class="score-list">
+        <li class="score-list--item">Name: 100</li>
+        <li class="score-list--item">Name: 100</li>
+        <li class="score-list--item">Name: 100</li>
+        <li class="score-list--item">Name: 100</li>
+        <li class="score-list--item">Name: 100</li>
+      </ul>
+    </div>
+    <div class="section--add-score">
+      <span>Add score</span>
+      <form action="">
+        <div class="form-control">
+          <label for="playerName" aria-hidden></label>
+          <input type="text" id="playerName">
+        </div>
+        <div class="form-control">
+          <label for="playerScore" aria-hidden></label>
+          <input type="text" id="playerScore">
+        </div>
+        <button class="btn" type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
 </body>
 </html>
