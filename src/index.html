@@ -19,14 +19,14 @@
     </div>
     <div class="section--add-score">
       <span class="section--sub-header">Add score</span>
-      <form action="">
+      <form method="POST" data-game-form>
         <div class="form-control">
           <label for="playerName" aria-hidden></label>
-          <input type="text" id="playerName" placeholder="Your name">
+          <input type="text" id="playerName" placeholder="Your name" name="playerName" data-player-name>
         </div>
         <div class="form-control">
           <label for="playerScore" aria-hidden></label>
-          <input type="text" id="playerScore" placeholder="Your score">
+          <input type="text" id="playerScore" placeholder="Your score" name="playerScore" data-player-score>
         </div>
         <div class="form-control">
           <button class="btn btn-submit" type="submit">Submit</button>
