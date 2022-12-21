@@ -14,6 +14,12 @@ class Game {
     });
     return data;
   }
+
+  getGameScores = async () => {
+    const data = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/MhuKxqK5eTluMtdrkVY1/scores');
+    const scores = await data.json();
+    return scores;
+  }
 }
 
 export default Game;
