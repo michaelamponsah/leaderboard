@@ -16,9 +16,9 @@ class Game {
   }
 
   getGameScores = async () => {
-    const data = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/MhuKxqK5eTluMtdrkVY1/scores');
-    const scores = await data.json();
-    return scores;
+    const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/MhuKxqK5eTluMtdrkVY1/scores');
+    const data = await response.json();
+    return data.result;
   }
 }
 

@@ -1,31 +1,16 @@
-import 'lodash';
 import './style.css';
-import listBuilder from './modules/listBuilder.js';
+import displayData from './modules/displayData.js';
+import Game from './modules/Game.js';
 
-const data = [
-  {
-    name: 'Name',
-    score: '100',
-  },
-  {
-    name: 'Name',
-    score: '100',
-  },
-  {
-    name: 'Name',
-    score: '100',
-  },
-  {
-    name: 'Name',
-    score: '100',
-  },
-];
+const theReturnOfNero = new Game('The return of Nero');
 
-const displayData = (data) => {
-  const ul = document.querySelector('.score-list');
-  data.forEach((element) => {
-    ul.innerHTML += listBuilder(element);
-  });
+window.onload = async () => {
+  const data = await theReturnOfNero.getGameScores();
+  displayData(data);
 };
 
-window.onload = displayData(data);
+const refreshBtn = document.querySelector('[data-refresh]');
+refreshBtn.addEventListener('click', async () => {
+  const data = await theReturnOfNero.getGameScores();
+  displayData(data);
+});
