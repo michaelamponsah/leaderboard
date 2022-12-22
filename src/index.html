@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leaderboard</title>
 </head>
+
 <body class="container">
   <header>
     <h1>Leaderboard</h1>
   </header>
   <section class="section">
     <div class="section--recent-score">
-      <span class="section--sub-header">Recent scores <button class="btn">Refresh</button></span> 
+      <span class="section--sub-header">Recent scores <button class="btn" data-refresh>Refresh</button></span>
       <ul class="score-list">
-       
+
       </ul>
     </div>
     <div class="section--add-score">
       <span class="section--sub-header">Add score</span>
-      <form action="">
+      <form method="POST" data-score-form>
         <div class="form-control">
           <label for="playerName" aria-hidden></label>
-          <input type="text" id="playerName" placeholder="Your name">
+          <input type="text" id="playerName" placeholder="Your name" name="playerName" data-player-name required>
         </div>
         <div class="form-control">
           <label for="playerScore" aria-hidden></label>
-          <input type="text" id="playerScore" placeholder="Your score">
+          <input type="text" id="playerScore" placeholder="Your score" name="playerScore" data-player-score required>
         </div>
         <div class="form-control">
           <button class="btn btn-submit" type="submit">Submit</button>
@@ -35,4 +37,5 @@
     </div>
   </section>
 </body>
+
 </html>

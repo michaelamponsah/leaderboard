@@ -1,7 +1,7 @@
 const listBuilder = (data) => {
-  const { name, score } = data;
+  const { user, score } = data;
   return `
-  <li class="score-list--item">${name}: ${score}</li>
+  <li class="score-list--item">${user}: ${score}</li>
   `;
 };
 
