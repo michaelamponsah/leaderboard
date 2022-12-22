@@ -20,6 +20,17 @@ class Game {
     const data = await response.json();
     return data.result;
   }
+
+  savePlayerData = async (uri, userData) => {
+    const data = await fetch(uri, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(userData),
+    });
+    return data;
+  }
 }
 
 export default Game;
