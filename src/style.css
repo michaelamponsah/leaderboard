@@ -61,8 +61,10 @@ input {
 }
 
 .btn {
-  padding: 0.25em;
+  padding: 0.35em 0.5em;
   font-weight: bold;
+  background-color: rgb(167, 179, 4);
+  border: none;
 }
 
 .btn:hover {
