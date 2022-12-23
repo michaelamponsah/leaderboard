@@ -5,13 +5,13 @@ import Game from './modules/Game.js';
 const theReturnOfNero = new Game('The return of Nero');
 
 window.onload = async () => {
-  const data = await theReturnOfNero.getGameScores();
+  const data = await theReturnOfNero.getGameScoresAsync();
   displayData(data);
 };
 
 const refreshBtn = document.querySelector('[data-refresh]');
 refreshBtn.addEventListener('click', async () => {
-  const data = await theReturnOfNero.getGameScores();
+  const data = await theReturnOfNero.getGameScoresAsync();
   displayData(data);
 });
 
@@ -44,6 +44,6 @@ scoreForm.setAttribute('action', uri);
 
 scoreForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  theReturnOfNero.savePlayerData(uri, userData);
+  theReturnOfNero.savePlayerDataAsync(uri, userData);
   scoreForm.reset();
 });
